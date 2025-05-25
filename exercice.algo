@@ -1,0 +1,20 @@
+ALGORITHM sentence
+VAR
+    voy, mot, length,i:INTEGER
+    str: STRING
+BEGIN
+    write("entrer une phrase qui se termine par un point")
+    read(str)
+    length:= str.length
+    FOR i FROM 0 TO length-1 Do
+        IF (str[i]=" " or str[i]=".") THEN
+            mot:= mot+1
+        END_IF
+        IF (str[i] in {"a","e","i","u","o","y"}) THEN
+            voy:= voy+1
+        END_IF
+    END_FOR
+    write("le nombre de voyelles est:", voy)
+    write("le nombre des mots est: ", mot)
+    write("la longueur de phrase est :", length)
+END
